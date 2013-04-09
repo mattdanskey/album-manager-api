@@ -1,3 +1,3 @@
 class SongSerializer < ActiveModel::Serializer
-  attributes :id, :albumId, :track, :title
+  attributes :id, :album_id, :track, :title
 end

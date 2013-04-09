@@ -1,7 +1,8 @@
 AlbumManager::Application.routes.draw do
-  resources :songs, except: [:new, :edit]
 
-  resources :albums, except: [:new, :edit]
+  resources :albums do
+    resources :songs
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
