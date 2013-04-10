@@ -5,7 +5,7 @@ class AlbumsController < ApplicationController
   end
   
   def create
-    render json: Album.create!(params.permit(:artist, :title, :genre)), root: false
+    render json: Album.create!(title: params[:title], artist: params[:artist], genre: params[:genre]), root: false
   end
 
   def show
@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
   end
   
   def update
-    @album.update!(params.permit(:artist, :title, :genre))
+    @album.update!(title: params[:title], artist: params[:artist], genre: params[:genre])
     render json: @album, root: false
   end
 

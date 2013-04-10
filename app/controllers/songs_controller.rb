@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
     
   def create
-    render json: Song.create!(params.permit(:track, :title)), root: false
+    render json: Song.create!(title: params[:title], track: params[:track]), root: false
   end
   
   def show
@@ -13,7 +13,7 @@ class SongsController < ApplicationController
   end
   
   def update
-    @song.update!(params.permit(:track, :title))
+    @song.update!(title: params[:title], track: params[:track])
     render json: @song, root: false
   end
   
