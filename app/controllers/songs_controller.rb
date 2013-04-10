@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
     
   def create
-    render json: Song.create!(title: params[:title], track: params[:track]), root: false
+    render json: Song.create!(title: params[:title], track: params[:track], album_id: params[:album_id]), root: false
   end
   
   def show
