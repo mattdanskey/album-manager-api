@@ -13,7 +13,7 @@ class SongsController < ApplicationController
   end
   
   def update
-    @song.update!(title: params[:title], track: params[:track])
+    @song = Song.update(params[:id], title: params[:title], track: params[:track])
     render json: @song, root: false
   end
   

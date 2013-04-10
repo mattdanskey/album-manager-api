@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
   end
   
   def update
-    @album.update!(title: params[:title], artist: params[:artist], genre: params[:genre])
+    @album = Album.update(params[:id], title: params[:title], artist: params[:artist], genre: params[:genre])
     render json: @album, root: false
   end
 
