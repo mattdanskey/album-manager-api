@@ -10,6 +10,9 @@ gem "active_model_serializers"
 
 gem 'sqlite3'
 
+# For Cross-origin resource sharing
+gem 'rack-cors', :require => 'rack/cors'
+
 group :test do
   gem "shoulda-matchers"
 end

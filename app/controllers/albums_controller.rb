@@ -5,7 +5,7 @@ class AlbumsController < ApplicationController
   end
   
   def create
-    render json: Album.create!(params.permit(:artist, :title, :genre), root: false
+    render json: Album.create!(params.permit(:artist, :title, :genre)), root: false
   end
 
   def show
